@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameX</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header id="header" class="header">
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+          <a
+            href="index.html"
+            class="logo text-3xl font-extrabold"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="0"
+            >GameX</a
+          >
+
+          <button
+            class="navbar-toggler d-block d-md-none bg-transparent outline-0 border-0"
+            type="button"
+            aria-label="Toggle navigation"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="100"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              fill="#ff014f"
+              stroke="#ff014f"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-menu"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  href="index.html"
+                  class="nav-link custom-underline"
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  data-aos-delay="100"
+                  data-section="home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/games"
+                  class="nav-link custom-underline"
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  data-aos-delay="200"
+                  data-section="games"
+                  >Games</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#about"
+                  class="nav-link custom-underline"
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  data-aos-delay="300"
+                  data-section="about"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#contact"
+                  class="nav-link custom-underline"
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  data-aos-delay="400"
+                  data-section="contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          id="mySideNavbar"
+          class="popup-mobile-menu"
+          onclick="closeNav()"
+        >
+          <div class="inner p-5" onclick="event.stopPropagation()">
+            <div class="menu-top">
+              <div class="menu-header">
+                <a
+                  href="index.html"
+                  class="logo "
+                  
+                  >GameX</a
+                >
+                <div class="close-button " onclick="closeNav()">
+                  <button class="close-menu-activation close">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-x"
+                    >
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <h2 class="heading font-weight-bold mb-1 mt-5">
+                Buy UC at the <span class="text-main">Best Prices</span>
+              </h2>
+              <p class="discription">
+                Enjoy competitive prices and a seamless shopping experience
+                backed by dedicated customer support.
+              </p>
+            </div>
+            <div class="content">
+              <ul class="primary-menu nav nav-pills onepagenav">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="/games">Games</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div
+      id="home"
+      class="hero d-flex align-items-center justify-content-center text-center text-lightn"
+    >
+      <div class="hero-content container">
+        <h1
+          class="heading display-1 mb-3"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="600"
+        >
+          Buy UC at the <span class="text-main">Best Prices</span>
+        </h1>
+        <p
+          class="desc font-weight-medium mb-4"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="800"
+        >
+          Enjoy competitive prices and a seamless shopping experience backed by
+          dedicated customer support. Join thousands of satisfied gamers who
+          trust us for reliable transactions and the latest in-game updates.
+        </p>
+        <p
+          class="lead mb-4"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="1000"
+        >
+          Instant Delivery | Secure Payments | Best Offers
+        </p>
+        <div
+          class="hero-btns d-flex align-items-center justify-content-center flex-wrap"
+        >
+          <a
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="1200"
+            href="#products"
+            class="btn btn-lg font-weight-bold"
+            >Shop Now</a
+          >
+          <a
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="1400"
+            href="#how-it-works"
+            class="btn btn-lg font-weight-bold"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Games Section -->
+    <section id="games" class="py-5 bg-mainBg">
+      <div class="container text-center">
+        <h2 class="text-orange display-4 font-weight-bold mb-4">
+           Games
+        </h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card bg-secondary text-main">
+              <img
+                src="pubg-banner.jpg"
+                alt="UC Bundle 1"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h3 class="card-title">UC Bundle 1</h3>
+                <p class="card-text">$4.99</p>
+                <a href="#" class="btn btn-warning font-weight-bold">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card bg-secondary text-main">
+              <img
+                src="pubg-banner.jpg"
+                alt="UC Bundle 2"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h3 class="card-title">UC Bundle 2</h3>
+                <p class="card-text">$9.99</p>
+                <a href="#" class="btn btn-warning font-weight-bold">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card bg-secondary text-main">
+              <img
+                src="pubg-banner.jpg"
+                alt="UC Bundle 3"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h3 class="card-title">UC Bundle 3</h3>
+                <p class="card-text">$19.99</p>
+                <a href="#" class="btn btn-warning font-weight-bold">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 bg-secondary">
+      <div class="container text-center">
+        <h2 class="text-orange display-4 font-weight-bold mb-4">About Us</h2>
+        <p class="lead">
+          Our company is dedicated to providing the best PUBG UC buying
+          experience. We offer secure payments, instant delivery, and the best
+          prices available.
+        </p>
+      </div>
+    </section>
+
+   
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5 bg-secondary">
+      <div class="container text-center">
+        <h2 class="text-orange display-4 font-weight-bold mb-4">Contact Us</h2>
+        <form class="mx-auto" style="max-width: 600px">
+          <div class="form-group">
+            <label for="name" class="lead">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control bg-mainBg text-main border-0"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" class="lead">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control bg-mainBg text-main border-0"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message" class="lead">Message</label>
+            <textarea
+              id="message"
+              rows="5"
+              class="form-control bg-mainBg text-main border-0"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning font-weight-bold">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mainBg py-4 text-center text-main">
+      <p>&copy; 2024 GameX. All rights reserved.</p>
+      <a href="#home" class="text-main">Back to top</a>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // Duration of the animation (in ms)
+        easing: "ease-in-out", // Easing function
+        once: true, // Whether animation should happen only once - while scrolling down
+      });
+    </script>
+  </body>
+</html>

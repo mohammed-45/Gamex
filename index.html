@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content=""/>
+
+    <meta name="description" content=""/>
+    <meta property="og:type" content="" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="" />
     <title>GameX</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -62,7 +71,7 @@
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse align-items-center navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                 <a
@@ -77,13 +86,24 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="/games"
+                  href="#categories"
                   class="nav-link custom-underline"
                   data-aos="fade-down"
                   data-aos-duration="500"
                   data-aos-delay="200"
-                  data-section="games"
-                  >Games</a
+                  data-section="categories"
+                  >Categories</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#products"
+                  class="nav-link custom-underline"
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  data-aos-delay="300"
+                  data-section="products"
+                  >Products</a
                 >
               </li>
               <li class="nav-item">
@@ -92,7 +112,7 @@
                   class="nav-link custom-underline"
                   data-aos="fade-down"
                   data-aos-duration="500"
-                  data-aos-delay="300"
+                  data-aos-delay="400"
                   data-section="about"
                   >About</a
                 >
@@ -103,29 +123,32 @@
                   class="nav-link custom-underline"
                   data-aos="fade-down"
                   data-aos-duration="500"
-                  data-aos-delay="400"
+                  data-aos-delay="500"
                   data-section="contact"
                   >Contact</a
                 >
               </li>
             </ul>
+            <div class="nav-profile ml-4"  data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="550"
+         >
+              <a href="/profile.html">
+                <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                </svg>
+                
+                
+              </a>
+            </div>
           </div>
         </div>
-        <div
-          id="mySideNavbar"
-          class="popup-mobile-menu"
-          onclick="closeNav()"
-        >
+        <div id="mySideNavbar" class="popup-mobile-menu" onclick="closeNav()">
           <div class="inner p-5" onclick="event.stopPropagation()">
             <div class="menu-top">
               <div class="menu-header">
-                <a
-                  href="index.html"
-                  class="logo "
-                  
-                  >GameX</a
-                >
-                <div class="close-button " onclick="closeNav()">
+                <a href="index.html" class="logo">GameX</a>
+                <div class="close-button" onclick="closeNav()">
                   <button class="close-menu-activation close">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -154,12 +177,25 @@
               </p>
             </div>
             <div class="content">
+              <div class="nav-profile"  data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="550"
+         >
+              <a href="/profile.html">
+                <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                </svg>
+              </a>
+            </div>
               <ul class="primary-menu nav nav-pills onepagenav">
                 <li>
                   <a href="index.html">Home</a>
                 </li>
                 <li>
-                  <a href="/games">Games</a>
+                  <a href="#categories">Categories</a>
+                </li>
+                <li>
+                  <a href="#products">Products</a>
                 </li>
                 <li>
                   <a href="#about">About</a>
@@ -230,113 +266,549 @@
       </div>
     </div>
 
-    <!-- Games Section -->
-    <section id="games" class="py-5 bg-mainBg">
-      <div class="container text-center">
-        <h2 class="text-orange display-4 font-weight-bold mb-4">
-           Games
-        </h2>
+    <!-- Categories Section -->
+    <section class="section" id="categories" class="bg-mainBg">
+      <div class="container">
+        <h2 class="title">Categories</h2>
         <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card bg-secondary text-main">
-              <img
-                src="pubg-banner.jpg"
-                alt="UC Bundle 1"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title">UC Bundle 1</h3>
-                <p class="card-text">$4.99</p>
-                <a href="#" class="btn btn-warning font-weight-bold">Buy Now</a>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+            data-section="categories"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="200"
+          >
+            <img src="./images/banner-3.jpg" alt="UC Bundle 1" />
+          </div>
+
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="400"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="600"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="800"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="1000"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="1200"
+          >
+            <img src="./images/banner-3.jpg" alt="UC Bundle 1" />
+          </div>
+
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="1400"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="1600"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="1800"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th hidden-card"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="0"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th hidden-card"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="100"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th hidden-card"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="200"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th hidden-card"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="300"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+          <div
+            class="custom-card col-5th col-sm-5th col-md-5th col-lg-5th hidden-card"
+            data-aos="fade-down"
+            data-aos-duration="500"
+            data-aos-delay="400"
+          >
+            <img src="./images/game-1.jpg" alt="UC Bundle 1" />
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+            id="toggleButton"
+            class="toggleButton text-light btn font-weight-medium"
+          >
+            Show All
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section" id="products" class="bg-mainBg">
+      <div class="container">
+        <h2 class="title">Products</h2>
+        <div class="products row">
+          <div
+            class="product-card col-12 col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+            data-section="products"
+          >
+            <div class="wrapper">
+              <a href="/product.html" class="image">
+                <img src="./images/banner-2.jpeg" alt="UC Bundle 1" />
+              </a>
+              <div class="content">
+                <h3 class="title">PUBG MOBILE 60 UC</h3>
+                <p class="desc">MOBILE, PUBG Mobile</p>
+                <span class="price">EGP 42.46</span>
+                <a href="/product.html">
+                  <button class="buy btn">Buy Now</button>
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card bg-secondary text-main">
-              <img
-                src="pubg-banner.jpg"
-                alt="UC Bundle 2"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title">UC Bundle 2</h3>
-                <p class="card-text">$9.99</p>
-                <a href="#" class="btn btn-warning font-weight-bold">Buy Now</a>
+
+          <div
+            class="product-card col-12 col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="200"
+          >
+            <div class="wrapper">
+              <a href="/product.html" class="image">
+                <img src="./images/banner-2.jpeg" alt="UC Bundle 1" />
+              </a>
+              <div class="content">
+                <h3 class="title">PUBG MOBILE 60 UC</h3>
+                <p class="desc">MOBILE, PUBG Mobile</p>
+                <span class="price">EGP 42.46</span>
+                <a href="/product.html">
+                  <button class="buy btn">Buy Now</button>
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card bg-secondary text-main">
-              <img
-                src="pubg-banner.jpg"
-                alt="UC Bundle 3"
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <h3 class="card-title">UC Bundle 3</h3>
-                <p class="card-text">$19.99</p>
-                <a href="#" class="btn btn-warning font-weight-bold">Buy Now</a>
+
+          <div
+            class="product-card col-12 col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="400"
+          >
+            <div class="wrapper">
+              <a href="/product.html" class="image">
+                <img src="./images/banner-2.jpeg" alt="UC Bundle 1" />
+              </a>
+              <div class="content">
+                <h3 class="title">PUBG MOBILE 60 UC</h3>
+                <p class="desc">MOBILE, PUBG Mobile</p>
+                <span class="price">EGP 42.46</span>
+                <a href="/product.html">
+                  <button class="buy btn">Buy Now</button>
+                </a>
               </div>
             </div>
           </div>
+
+          <div
+            class="product-card col-12 col-sm-6 col-md-4 col-lg-3"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="600"
+          >
+            <div class="wrapper">
+              <a href="/product.html" class="image">
+                <img src="./images/banner-2.jpeg" alt="UC Bundle 1" />
+              </a>
+              <div class="content">
+                <h3 class="title">PUBG MOBILE 60 UC</h3>
+                <p class="desc">MOBILE, PUBG Mobile</p>
+                <span class="price">EGP 42.46</span>
+                <a href="/product.html">
+                  <button class="buy btn">Buy Now</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card col-12 col-sm-6 col-md-4 col-lg-3 hidden-card"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+          >
+            <div class="wrapper">
+              <a href="/product.html" class="image">
+                <img src="./images/banner-2.jpeg" alt="UC Bundle 1" />
+              </a>
+              <div class="content">
+                <h3 class="title">PUBG MOBILE 60 UC</h3>
+                <p class="desc">MOBILE, PUBG Mobile</p>
+                <span class="price">EGP 42.46</span>
+                <a href="/product.html">
+                  <button class="buy btn">Buy Now</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card col-12 col-sm-6 col-md-4 col-lg-3 hidden-card"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="200"
+          >
+            <div class="wrapper">
+              <a href="/product.html" class="image">
+                <img src="./images/pubg-3000.png" alt="UC Bundle 1" />
+              </a>
+              <div class="content">
+                <h3 class="title">PUBG MOBILE 3000 UC</h3>
+                <p class="desc">MOBILE, PUBG Mobile</p>
+                <span class="price">EGP 49.99</span>
+                <a href="/product.html">
+                  <button class="buy btn">Buy Now</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card col-12 col-sm-6 col-md-4 col-lg-3 hidden-card"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="400"
+          >
+            <div class="wrapper">
+              <a href="/product.html" class="image">
+                <img src="./images/banner-2.jpeg" alt="UC Bundle 1" />
+              </a>
+              <div class="content">
+                <h3 class="title">PUBG MOBILE 60 UC</h3>
+                <p class="desc">MOBILE, PUBG Mobile</p>
+                <span class="price">EGP 42.46</span>
+                <a href="/product.html">
+                  <button class="buy btn">Buy Now</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <button
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-delay="0"
+            id="toggleButton"
+            class="toggleButton text-light btn font-weight-medium"
+          >
+            Show All
+          </button>
         </div>
       </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="py-5 bg-secondary">
-      <div class="container text-center">
-        <h2 class="text-orange display-4 font-weight-bold mb-4">About Us</h2>
-        <p class="lead">
-          Our company is dedicated to providing the best PUBG UC buying
-          experience. We offer secure payments, instant delivery, and the best
-          prices available.
-        </p>
+    <section id="about" class="section">
+      <div class="containerr">
+        <h2 class="title">About Us</h2>
+        <div class="container">
+          <div class="mb-4"  data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-delay="0"
+          data-section="about">
+            <p>
+              Welcome to GameX, your premier destination for purchasing UC! At GameX, we are passionate about enhancing your gaming experience by providing you with the best in-game currency options to elevate your gameplay.
+            </p>
+          </div>
+          <div class="mb-4"  data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-delay="200"
+          data-section="products">
+            <h4 class="mb-3 font-weight-medium text-main">Who We Are</h4>
+            <p>
+              GameX was founded by a team of dedicated gaming enthusiasts who
+              understand the importance of seamless and enjoyable gaming
+              experiences. With years of experience in the gaming industry, we
+              have built a platform that ensures you get your UC quickly,
+              securely, and at competitive prices.
+            </p>
+          </div>
+          <div class="mb-4"  data-aos="fade-right"
+          data-aos-duration="500"
+          data-aos-delay="400"
+          data-section="products">
+            <h4 class="mb-3 font-weight-medium text-main">Our Mission
+            </h4>
+            <p>
+              Our mission at GameX is simple: to make your gaming journey more exciting and rewarding. We strive to provide our customers with:
+
+              <ol>
+                <li>Quality Service: We pride ourselves on delivering fast and reliable services, ensuring you get your UC without any hassle.
+                </li>
+                <li>Security: Your security is our top priority. We employ the latest security measures to protect your transactions and personal information.
+                </li>
+                <li>Customer Satisfaction: We are committed to providing exceptional customer service. Our support team is always ready to assist you with any questions or concerns.
+
+                </li>
+              </ol>
+            </p>
+          </div>
+         
+        </div>
       </div>
     </section>
 
-   
     <!-- Contact Us Section -->
-    <section id="contact" class="py-5 bg-secondary">
-      <div class="container text-center">
-        <h2 class="text-orange display-4 font-weight-bold mb-4">Contact Us</h2>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="title">Contact Us</h2>
         <form class="mx-auto" style="max-width: 600px">
-          <div class="form-group">
+          <div class="form-group"  data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="0"
+          data-section="contact">
             <label for="name" class="lead">Name</label>
-            <input
-              type="text"
-              id="name"
-              class="form-control bg-mainBg text-main border-0"
-            />
+            <input type="text" id="name" class="form-control" />
           </div>
-          <div class="form-group">
+          <div class="form-group"  data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="200"
+          >
             <label for="email" class="lead">Email</label>
-            <input
-              type="email"
-              id="email"
-              class="form-control bg-mainBg text-main border-0"
-            />
+            <input type="email" id="email" class="form-control" />
           </div>
-          <div class="form-group">
+          <div class="form-group"  data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="400"
+         >
             <label for="message" class="lead">Message</label>
-            <textarea
-              id="message"
-              rows="5"
-              class="form-control bg-mainBg text-main border-0"
-            ></textarea>
+            <textarea id="message" rows="8" class="form-control"></textarea>
           </div>
-          <button type="submit" class="btn btn-warning font-weight-bold">
-            Send Message
-          </button>
+          <div class="d-flex justify-content-center"  data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="600"
+         >
+            <button
+              type="submit"
+              class="mt-4 mx-auto btn text-white font-weight-medium"
+            >
+              Send Message
+            </button>
+          </div>
         </form>
       </div>
     </section>
 
+    <div class="merits py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-center">
+            <div class="icon">
+             
+              <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ff014f" viewBox="0 0 24 24">
+                <path d="M2.038 5.61A2.01 2.01 0 0 0 2 6v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6c0-.12-.01-.238-.03-.352l-.866.65-7.89 6.032a2 2 0 0 1-2.429 0L2.884 6.288l-.846-.677Z"/>
+                <path d="M20.677 4.117A1.996 1.996 0 0 0 20 4H4c-.225 0-.44.037-.642.105l.758.607L12 10.742 19.9 4.7l.777-.583Z"/>
+              </svg>
+              
+            </div>
+            <div class="text-white ml-3">
+              <h6 class="feature">FAST DELIVERY
+              </h6>
+              <p class="m-0 feature-desc">100% Delivery on Time
+
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-center">
+            <div class="icon">
+             
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ff014f" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2a7 7 0 0 0-7 7 3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V9a5 5 0 1 1 10 0v7.083A2.919 2.919 0 0 1 14.083 19H14a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a2 2 0 0 0 1.732-1h.351a4.917 4.917 0 0 0 4.83-4H19a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3 7 7 0 0 0-7-7Zm1.45 3.275a4 4 0 0 0-4.352.976 1 1 0 0 0 1.452 1.376 2.001 2.001 0 0 1 2.836-.067 1 1 0 1 0 1.386-1.442 4 4 0 0 0-1.321-.843Z" clip-rule="evenodd"/>
+              </svg>
+              
+              
+            </div>
+            <div class="text-white ml-3">
+              <h6 class="feature">24/7 SUPPORT
+              </h6>
+              <p class="m-0 feature-desc">Always Ready to Help
+
+
+
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 d-flex align-items-center">
+            <div class="icon">
+             
+              <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ff014f" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M11.644 3.066a1 1 0 0 1 .712 0l7 2.666A1 1 0 0 1 20 6.68a17.694 17.694 0 0 1-2.023 7.98 17.406 17.406 0 0 1-5.402 6.158 1 1 0 0 1-1.15 0 17.405 17.405 0 0 1-5.403-6.157A17.695 17.695 0 0 1 4 6.68a1 1 0 0 1 .644-.949l7-2.666Zm4.014 7.187a1 1 0 0 0-1.316-1.506l-3.296 2.884-.839-.838a1 1 0 0 0-1.414 1.414l1.5 1.5a1 1 0 0 0 1.366.046l4-3.5Z" clip-rule="evenodd"/>
+              </svg>
+              
+              
+            </div>
+            <div class="text-white ml-3">
+              <h6 class="feature">SECURE PAYMENTS
+
+              </h6>
+              <p class="m-0 feature-desc">Secure Payment Options
+
+
+
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
-    <footer class="bg-mainBg py-4 text-center text-main">
-      <p>&copy; 2024 GameX. All rights reserved.</p>
-      <a href="#home" class="text-main">Back to top</a>
+    <footer class="bg-mainBg py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12  col-md-6 col-lg-5 col-xl-4">
+            <a
+            href="index.html"
+            class="logo  font-extrabold"
+            >GameX</a
+          >
+          <p class="my-4 footer-desc">Enjoy competitive prices and a seamless shopping experience backed by dedicated customer support.
+          </p>
+        
+          <a
+           
+            href="#products"
+            class="btn text-white font-weight-medium"
+            >Shop Now</a
+          >
+         </div>
+         <div class="col-12  col-md-6 col-lg-3 col-xl-2">
+          <h5
+          class="links-heading display-4 mb-0"
+          >GameX</h5
+        >
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/profile.html">My Account</a></li>
+        </ul>
+       
+       </div>
+       <div class="col-12  col-md-6 col-lg-3 col-xl-2">
+        <h5
+        class="links-heading display-4 mb-0"
+        >Contact Us</h5
+      >
+      <ul>
+        <li><a href="mailto:gamex@gmail.com"><svg class=" text-main " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+        </svg><span>gamex@gmail.com</span>
+        </a></li>
+        <li><a href="tel:+201234567890"><svg class=" text-main" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
+        </svg>
+        <span>+20 1234567890</span>
+        </a></li>
+      </ul>
+     
+     </div>
+     <div class="col-12  col-md-6 col-lg-5 col-xl-4">
+      <h5
+      class="links-heading display-4 mb-0"
+      >Join our newsletter!</h5
+    >
+    <div class="newsletter ">
+<form>
+  <input type="email" id="email" class="form-control" placeholder="Email Address"/>
+  <button type="submit">Subscribe</button>
+</form>
+    </div>
+   
+   </div>
+          </div>
+        </div>
+      </div>
     </footer>
+    <div>
+      <p class="rights text-center pt-3">&copy; 2024 GameX. All rights reserved.</p>
+  
+      </div>
     <script src="./script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

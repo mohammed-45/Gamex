@@ -85,34 +85,79 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document
-  .getElementById("descriptionButton")
-  .addEventListener("click", function () {
-    var descriptionText = document.getElementById("descriptionText");
-    var instructionText = document.getElementById("instructionText");
-    document.getElementById("descriptionButton").classList.add("active");
-    document.getElementById("instructionButton").classList.remove("active");
-    if (descriptionText.classList.contains("hidden")) {
-      instructionText.classList.remove("visible");
-      instructionText.classList.add("hidden");
-      descriptionText.classList.remove("hidden");
-      descriptionText.classList.add("visible");
-   
-    }
-  });
+if (document.getElementById("descriptionButton")) {
+  document
+    .getElementById("descriptionButton")
+    .addEventListener("click", function () {
+      var descriptionText = document.getElementById("descriptionText");
+      var instructionText = document.getElementById("instructionText");
+      document.getElementById("descriptionButton").classList.add("active");
+      document.getElementById("instructionButton").classList.remove("active");
+      if (descriptionText.classList.contains("hidden")) {
+        instructionText.classList.remove("visible");
+        instructionText.classList.add("hidden");
+        descriptionText.classList.remove("hidden");
+        descriptionText.classList.add("visible");
+      }
+    });
+}
+if (document.getElementById("instructionButton")) {
+  document
+    .getElementById("instructionButton")
+    .addEventListener("click", function () {
+      var descriptionText = document.getElementById("descriptionText");
+      var instructionText = document.getElementById("instructionText");
+      document.getElementById("instructionButton").classList.add("active");
+      document.getElementById("descriptionButton").classList.remove("active");
+      if (instructionText.classList.contains("hidden")) {
+        descriptionText.classList.remove("visible");
+        descriptionText.classList.add("hidden");
+        instructionText.classList.remove("hidden");
+        instructionText.classList.add("visible");
+      }
+    });
+}
+
+document.getElementById("account-btn").addEventListener("click", function () {
+  setActiveButton("account-btn");
+  showSection("account-section");
+});
+
+document.getElementById("wallet-btn").addEventListener("click", function () {
+  console.log("wallet");
+
+  setActiveButton("wallet-btn");
+  showSection("wallet-section");
+});
 
 document
-  .getElementById("instructionButton")
+  .getElementById("transactions-btn")
   .addEventListener("click", function () {
-    var descriptionText = document.getElementById("descriptionText");
-    var instructionText = document.getElementById("instructionText");
-    document.getElementById("instructionButton").classList.add("active");
-    document.getElementById("descriptionButton").classList.remove("active");
-    if (instructionText.classList.contains("hidden")) {
-      descriptionText.classList.remove("visible");
-      descriptionText.classList.add("hidden");
-      instructionText.classList.remove("hidden");
-      instructionText.classList.add("visible");
-     
+    setActiveButton("transactions-btn");
+    showSection("transactions-section");
+  });
+
+document.getElementById("orders-btn").addEventListener("click", function () {
+  setActiveButton("orders-btn");
+
+  showSection("orders-section");
+});
+
+function setActiveButton(buttonId) {
+  var buttons = document.querySelectorAll(".side-controller button");
+  buttons.forEach(function (button) {
+    button.classList.remove("active-button");
+  });
+  document.getElementById(buttonId).classList.add("active-button");
+}
+
+function showSection(sectionId) {
+  var sections = document.querySelectorAll(".profile-section");
+  sections.forEach(function (section) {
+    if (section.id === sectionId) {
+      section.classList.add("show");
+    } else {
+      section.classList.remove("show");
     }
   });
+}

@@ -62,27 +62,57 @@ document.addEventListener("DOMContentLoaded", function () {
 //   });
 // });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll(".toggleButton");
 
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleButtons = document.querySelectorAll(".toggleButton");
-  
-    toggleButtons.forEach(button => {
-      button.addEventListener("click", function() {
-        const section = this.closest(".section");
-        const hiddenCards = section.querySelectorAll(".hidden-card");
-  
-        if (this.textContent.includes("Show All")) {
-          hiddenCards.forEach(card => {
-            card.classList.add("show"); // Add the 'show' class to reveal hidden cards
-          });
-          this.textContent = "Show Less"; // Change button text
-        } else {
-          hiddenCards.forEach(card => {
-            card.classList.remove("show"); // Remove the 'show' class to hide cards
-          });
-          this.textContent = "Show All"; // Change button text
-        }
-      });
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const section = this.closest(".section");
+      const hiddenCards = section.querySelectorAll(".hidden-card");
+
+      if (this.textContent.includes("Show All")) {
+        hiddenCards.forEach((card) => {
+          card.classList.add("show"); // Add the 'show' class to reveal hidden cards
+        });
+        this.textContent = "Show Less"; // Change button text
+      } else {
+        hiddenCards.forEach((card) => {
+          card.classList.remove("show"); // Remove the 'show' class to hide cards
+        });
+        this.textContent = "Show All"; // Change button text
+      }
     });
   });
-  
+});
+
+document
+  .getElementById("descriptionButton")
+  .addEventListener("click", function () {
+    var descriptionText = document.getElementById("descriptionText");
+    var instructionText = document.getElementById("instructionText");
+    document.getElementById("descriptionButton").classList.add("active");
+    document.getElementById("instructionButton").classList.remove("active");
+    if (descriptionText.classList.contains("hidden")) {
+      instructionText.classList.remove("visible");
+      instructionText.classList.add("hidden");
+      descriptionText.classList.remove("hidden");
+      descriptionText.classList.add("visible");
+   
+    }
+  });
+
+document
+  .getElementById("instructionButton")
+  .addEventListener("click", function () {
+    var descriptionText = document.getElementById("descriptionText");
+    var instructionText = document.getElementById("instructionText");
+    document.getElementById("instructionButton").classList.add("active");
+    document.getElementById("descriptionButton").classList.remove("active");
+    if (instructionText.classList.contains("hidden")) {
+      descriptionText.classList.remove("visible");
+      descriptionText.classList.add("hidden");
+      instructionText.classList.remove("hidden");
+      instructionText.classList.add("visible");
+     
+    }
+  });

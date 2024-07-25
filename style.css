@@ -128,11 +128,9 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 18px;
   background-color: var(--color-body);
 }
 ::-moz-scrollbar-thumb {
-  border-radius: 18px;
   background-color: var(--color-body);
 }
 
@@ -253,7 +251,7 @@ section .title {
 }
 @media (max-width: 575px) {
   section .title {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 
@@ -909,7 +907,27 @@ footer .newsletter form button {
   background-color: var(--color-primary);
   color: white;
 }
-
+#profile .wallet-overview {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+#profile .wallet-overview .balance-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-lightn);
+}
+#profile .wallet-overview .price {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+#profile .wallet-overview .desc {
+  font-size: 12px;
+}
 #profile .profile-section {
   opacity: 0;
   max-height: 0;
@@ -920,6 +938,48 @@ footer .newsletter form button {
 #profile .profile-section.show {
   opacity: 1;
   max-height: 1000px;
+}
+#profile .table {
+  margin: 0;
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+}
+#profile .overflow-table {
+  overflow-x: auto;
+}
+#profile .table thead tr {
+  /* background: var(--color-subtitle); */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 300;
+}
+#profile .table tbody {
+  font-size: 14px;
+}
+
+#profile .table th,
+#profile .table td {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#profile .table tr th {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: top;
+}
+#profile .table tbody tr td {
+  color: var(--color-body);
+  vertical-align: middle;
+  padding: 10px 15px;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 #profile .side-controller li button svg {
   width: 28px;
@@ -1352,4 +1412,57 @@ margin-bottom: 15px;
 }
 #checkout .checkout-info-wrapper .checkout-product-pay .checkout-pay:hover {
   opacity: 0.8;
+}
+
+/* pagination */
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+  padding: 0;
+}
+
+.page-item {
+  margin: 5px;
+}
+
+.page-link {
+  display: block;
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid #191b1e !important;
+  color: var(--color-primary) !important;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.5s;
+  box-shadow: var(--inner-shadow);
+  outline: none;
+}
+
+.page-link:hover {
+  background-color: var(--color-primary);
+  color: white !important;
+}
+.page-link:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: var(--inner-shadow);
+}
+.page-item.active .page-link {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.page-item.disabled .page-link {
+  color: white;
+  pointer-events: none;
 }

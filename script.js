@@ -43,24 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", scrollActive);
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const toggleButton = document.getElementById("toggleButton");
-//   const hiddenCards = document.querySelectorAll(".hidden-card");
-
-//   toggleButton.addEventListener("click", function () {
-//     if (toggleButton.textContent.includes("Show All")) {
-//       hiddenCards.forEach((card) => {
-//         card.classList.add("show"); // Add the 'show' class to reveal hidden cards
-//       });
-//       toggleButton.textContent = "Show Less"; // Change button text
-//     } else {
-//       hiddenCards.forEach((card) => {
-//         card.classList.remove("show"); // Remove the 'show' class to hide cards
-//       });
-//       toggleButton.textContent = "Show All"; // Change button text
-//     }
-//   });
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButtons = document.querySelectorAll(".toggleButton");
@@ -117,47 +99,49 @@ if (document.getElementById("instructionButton")) {
       }
     });
 }
-
-document.getElementById("account-btn").addEventListener("click", function () {
-  setActiveButton("account-btn");
-  showSection("account-section");
-});
-
-document.getElementById("wallet-btn").addEventListener("click", function () {
-  console.log("wallet");
-
-  setActiveButton("wallet-btn");
-  showSection("wallet-section");
-});
-
-document
-  .getElementById("transactions-btn")
-  .addEventListener("click", function () {
-    setActiveButton("transactions-btn");
-    showSection("transactions-section");
+if (document.getElementById("account-btn")) {
+  document.getElementById("account-btn").addEventListener("click", function () {
+    setActiveButton("account-btn");
+    showSection("account-section");
   });
-
-document.getElementById("orders-btn").addEventListener("click", function () {
-  setActiveButton("orders-btn");
-
-  showSection("orders-section");
-});
-
-function setActiveButton(buttonId) {
-  var buttons = document.querySelectorAll(".side-controller button");
-  buttons.forEach(function (button) {
-    button.classList.remove("active-button");
+  
+  document.getElementById("wallet-btn").addEventListener("click", function () {
+    console.log("wallet");
+  
+    setActiveButton("wallet-btn");
+    showSection("wallet-section");
   });
-  document.getElementById(buttonId).classList.add("active-button");
-}
-
-function showSection(sectionId) {
-  var sections = document.querySelectorAll(".profile-section");
-  sections.forEach(function (section) {
-    if (section.id === sectionId) {
-      section.classList.add("show");
-    } else {
-      section.classList.remove("show");
-    }
+  
+  document
+    .getElementById("transactions-btn")
+    .addEventListener("click", function () {
+      setActiveButton("transactions-btn");
+      showSection("transactions-section");
+    });
+  
+  document.getElementById("orders-btn").addEventListener("click", function () {
+    setActiveButton("orders-btn");
+  
+    showSection("orders-section");
   });
+  
+  function setActiveButton(buttonId) {
+    var buttons = document.querySelectorAll(".side-controller button");
+    buttons.forEach(function (button) {
+      button.classList.remove("active-button");
+    });
+    document.getElementById(buttonId).classList.add("active-button");
+  }
+  
+  function showSection(sectionId) {
+    var sections = document.querySelectorAll(".profile-section");
+    sections.forEach(function (section) {
+      if (section.id === sectionId) {
+        section.classList.add("show");
+      } else {
+        section.classList.remove("show");
+      }
+    });
+  }
+  
 }

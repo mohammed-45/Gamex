@@ -110,6 +110,8 @@ body {
   width: 100%;
   min-height: 100%;
   overflow-x: clip;
+  text-align: start;
+
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -166,11 +168,11 @@ button {
 
 .btn:before {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   height: 30px;
   width: 30px;
-  border-left: 2px solid var(--color-primary);
+  border-inline-start: 2px solid var(--color-primary);
   border-top: 2px solid var(--color-primary);
   content: "";
   z-index: -1;
@@ -180,11 +182,11 @@ button {
 }
 .btn:after {
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   bottom: 0;
   height: 30px;
   width: 30px;
-  border-right: 2px solid var(--color-primary);
+  border-inline-end: 2px solid var(--color-primary);
   border-bottom: 2px solid var(--color-primary);
   content: "";
   z-index: -1;
@@ -286,8 +288,11 @@ section .title {
   box-shadow: var(--shadow-1);
   backdrop-filter: blur(10px);
 }
+.navbar-nav {
+  margin-inline-start: auto;
+}
 .navbar-nav .nav-item .nav-link {
-  margin-left: 5px;
+  margin-inline-start: 5px;
   color: var(--color-lightn) !important;
   transition: 0.3s;
   font-size: 15px;
@@ -311,6 +316,7 @@ section .title {
 .header .navbar .nav-profile {
   display: flex;
   align-items: center;
+  margin-inline-start: 16px;
 }
 .header .navbar .popup-mobile-menu .nav-profile {
   margin-top: 20px;
@@ -332,8 +338,8 @@ section .title {
   height: 100%;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   background-color: rgba(0, 0, 0, 0.5);
   visibility: hidden;
   opacity: 0;
@@ -347,7 +353,7 @@ section .title {
 
 .popup-mobile-menu.menu-open .inner {
   opacity: 1;
-  left: 0;
+  inset-inline-start: 0;
   overflow-y: auto;
 }
 @media (max-width: 475px) {
@@ -369,7 +375,7 @@ section .title {
   flex-direction: column;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
   opacity: 0;
-  left: -100px;
+  inset-inline-start: -100px;
   transition: all 0.5s ease-out;
 }
 .popup-mobile-menu .inner .content {
@@ -379,7 +385,7 @@ section .title {
 .popup-mobile-menu .inner .content .primary-menu {
   display: flex;
   flex-direction: column;
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 .popup-mobile-menu .inner .content .primary-menu li {
   display: block;
@@ -436,7 +442,7 @@ section .title {
   content: "";
   padding: 22px;
   background: linear-gradient(145deg, #1e2024, #23272b);
-  left: 50%;
+  inset-inline-start: 50%;
   top: 50%;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -456,7 +462,7 @@ section .title {
   line-height: 29px;
   margin-top: 20px;
   color: #878e99;
-  padding-right: 0;
+  padding-inline-end: 0;
 }
 
 .hero {
@@ -470,7 +476,7 @@ section .title {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -560,7 +566,7 @@ section .title {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -626,7 +632,7 @@ section .title {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   background: linear-gradient(to right bottom, #212428, #16181c);
   opacity: 0;
   z-index: -1;
@@ -707,7 +713,7 @@ section .title {
 }
 #about ol {
   list-style: disc;
-  text-align: start;
+  text-align: inline-start;
 }
 #about ol li {
   margin-bottom: 10px;
@@ -776,6 +782,9 @@ section .title {
 .merits .feature-desc {
   color: var(--color-lightn);
   font-size: 14px;
+}
+.merits .merit-desc {
+  margin-inline-start: 12px;
 }
 /* Footer */
 footer {
@@ -847,7 +856,7 @@ footer .newsletter form button {
   text-transform: uppercase;
   border: 1px solid var(--color-primary);
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   top: 0;
   padding: 13px 20px 12px;
   cursor: pointer;
@@ -939,7 +948,7 @@ footer .newsletter form button {
   content: "";
   position: absolute;
   bottom: -12px;
-  right: -12px;
+  inset-inline-end: -12px;
   width: 44px;
   height: 44px;
   background-color: var(--color-primary);
@@ -950,6 +959,32 @@ footer .newsletter form button {
   cursor: pointer;
 }
 
+#profile .wallet-overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+#profile .wallet-overview  .balance-title {
+color: var(--color-lightn);
+text-transform: uppercase;
+font-size: 14px;
+font-weight: 500;
+margin-bottom: 8px;
+}
+#profile .wallet-overview  .total {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 32px;
+margin-bottom: 15px;
+
+
+}
+#profile .wallet-overview  .desc {
+  font-size: 12px;
+}
 .rights {
   background-color: var(--background-color-2);
 }
@@ -1021,7 +1056,7 @@ footer .newsletter form button {
 
 #product .product-info-wrapper form .pay-box .options {
   height: 170px;
-  padding-right: 5px;
+  padding-inline-end: 5px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -1076,7 +1111,7 @@ footer .newsletter form button {
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   cursor: pointer;
 }
 #product
@@ -1091,7 +1126,7 @@ footer .newsletter form button {
 }
 #product .product-info-wrapper form .pay-box .btn-check + .btn-primary .check {
   position: absolute;
-  left: 0px;
+  inset-inline-start: 0px;
   top: 0px;
   opacity: 0;
   width: 20px;
@@ -1118,12 +1153,12 @@ footer .newsletter form button {
 }
 #product .product-info-wrapper .product-checkout .pro-qty {
   border: 2px solid var(--color-border);
-  margin-right: 20px;
+  margin-inline-end: 20px;
 }
 #product .product-info-wrapper .product-checkout .pro-qty .qtybtn {
   font-size: 24px;
   color: #b2b2b2;
-  float: left;
+  float: inline-start;
   line-height: 40px;
   cursor: pointer;
   text-align: center;
@@ -1136,9 +1171,10 @@ footer .newsletter form button {
   border: none;
   color: #4c4c4c;
   line-height: 40px;
-  float: left;
+  float: inline-start;
 }
 #product .product-info-wrapper .product-checkout .checkout-btn {
+  margin-inline-end: 12px;
   text-transform: uppercase;
   background-color: var(--color-primary);
   color: white;
@@ -1188,6 +1224,7 @@ footer .newsletter form button {
   font-size: 14px;
   font-weight: 500;
   border: none;
+  margin-inline-end: 16px;
 }
 
 #product .description .btn-custom.active::before,
@@ -1199,11 +1236,11 @@ footer .newsletter form button {
 
 #product .description .btn-custom::before {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   height: 30px;
   width: 30px;
-  border-left: 2px solid var(--color-primary);
+  border-inline-start: 2px solid var(--color-primary);
   border-top: 2px solid var(--color-primary);
   content: "";
   z-index: -1;
@@ -1213,11 +1250,11 @@ footer .newsletter form button {
 }
 #product .description .btn-custom::after {
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   bottom: 0;
   height: 30px;
   width: 30px;
-  border-right: 2px solid var(--color-primary);
+  border-inline-end: 2px solid var(--color-primary);
   border-bottom: 2px solid var(--color-primary);
   content: "";
   z-index: -1;
@@ -1292,7 +1329,7 @@ footer .newsletter form button {
 }
 #checkout .checkout-info-wrapper .answer {
   font-size: 16px;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   color: var(--color-lightn);
 }
 #checkout .checkout-info-wrapper .checkout-product-available .answer {

@@ -98,7 +98,8 @@ html {
 }
 body.white-mode {
   --background-color-1: #ecf0f3;
-  color: var(--color-body-white);
+  --color-body: #3c3e41;
+  --color-lightn: #3c3e41;
 }
 body {
   background: var(--background-color-1) !important;
@@ -166,8 +167,11 @@ button {
   font-size: 14px;
   font-weight: 500;
   border: none;
+  color: var(--color-white);
 }
-
+.white-mode .btn {
+  color: var(--color-body) !important;
+}
 .btn:before {
   position: absolute;
   inset-inline-start: 0;
@@ -195,6 +199,9 @@ button {
   -webkit-transition: all, 0.7s;
   -o-transition: all, 0.7s;
   transition: all, 0.7s;
+}
+.btn:hover {
+  color: white !important;
 }
 .btn:hover:before,
 .btn:hover:after {
@@ -299,18 +306,20 @@ section .title {
 }
 .navbar-nav .nav-item .nav-link {
   margin-inline-start: 5px;
-  color: var(--color-lightn) !important;
-  transition: 0.3s;
+  transition: 0.3s all;
   font-size: 15px;
 }
 .white-mode .header.scrolled .navbar-nav .nav-item .nav-link {
   color: var(--color-body-white) !important;
 }
+.white-mode .navbar-nav .nav-item .nav-link {
+  color: #878e99 !important;
+}
 .white-mode .header.scrolled .navbar-nav .nav-item .nav-link:hover {
   color: black !important;
 }
 
-.navbar-nav  .nav-item .nav-link:hover {
+.navbar-nav .nav-item .nav-link:hover {
   color: var(--color-white) !important;
 }
 .navbar-nav .nav-item .nav-link.active {
@@ -322,16 +331,18 @@ section .title {
   color: var(--color-lightn) !important;
 }
 .white-mode .header.scrolled .logo {
-  color: var(--color-body-white) !important;
+  color: var(--color-lightn) !important;
+}
+.header.scrolled svg {
+  color: var(--color-body);
+}
+.white-mode .header .logo {
+  color: #c4cfde !important;
 }
 .header svg {
-  color: var(--color-body);
-
+  color: #878e99;
 }
 
-.white-mode .mode {
-  color: var(--color-body-white);
-}
 @media (max-width: 768px) {
   .logo {
     font-size: 24px;
@@ -374,7 +385,9 @@ section .title {
   visibility: visible;
   opacity: 1;
 }
-
+.white-mode .popup-mobile-menu .inner {
+  background: var(--gradient-box-w);
+}
 .popup-mobile-menu.menu-open .inner {
   opacity: 1;
   inset-inline-start: 0;
@@ -402,9 +415,15 @@ section .title {
   inset-inline-start: -100px;
   transition: all 0.5s ease-out;
 }
+.white-mode .popup-mobile-menu .inner .menu-top {
+  border-bottom-color: #dce1e4;
+}
 .popup-mobile-menu .inner .content {
   display: flex;
   flex-direction: column;
+}
+.popup-mobile-menu .content svg {
+  color: var(--color-body) !important;
 }
 .popup-mobile-menu .inner .content .primary-menu {
   display: flex;
@@ -441,6 +460,10 @@ section .title {
   align-items: center;
   gap: 25px;
 }
+.popup-mobile-menu .inner .menu-top .menu-header .logo {
+  color: var(--color-body) !important;
+
+}
 .popup-mobile-menu .inner .menu-top .menu-header .close-button {
   display: flex;
   justify-content: center;
@@ -460,7 +483,10 @@ section .title {
   color: #ff014f;
   height: auto;
 }
-
+.white-mode .popup-mobile-menu .inner .menu-top .menu-header .close-button .close:after {
+  background: var(--gradient-box-w);
+  box-shadow: var(--shadow-white-3);
+}
 .popup-mobile-menu .inner .menu-top .menu-header .close-button .close::after {
   position: absolute;
   content: "";
@@ -485,7 +511,7 @@ section .title {
   font-size: 16px;
   line-height: 29px;
   margin-top: 20px;
-  color: #878e99;
+  color: var(--color-body);
   padding-inline-end: 0;
 }
 
@@ -527,6 +553,7 @@ section .title {
   box-shadow: none;
   font-weight: 500 !important;
   font-size: 18px;
+  color: white !important;
 }
 .hero-content .btn:hover {
   opacity: 0.85;
@@ -649,6 +676,13 @@ section .title {
   display: inline-block;
   overflow: hidden;
 }
+.white-mode .product-card .wrapper{
+  background: var(--gradient-box-w);
+  box-shadow: var(--shadow-white-3);
+}
+.white-mode .product-card .wrapper:hover::before {
+  opacity: 0;
+}
 .product-card .wrapper::before {
   content: "";
   position: absolute;
@@ -765,6 +799,14 @@ section .title {
   box-shadow: var(--inner-shadow);
   letter-spacing: 1px;
 }
+.white-mode .form-group input.form-control {
+  background-color: #fdfefe;
+  border: 2px solid #dadada;
+  color: var(--color-body);
+  box-shadow: none;
+}
+
+
 .form-group textarea {
   min-height: 235px;
   background-color: #191b1e;
@@ -781,9 +823,21 @@ section .title {
   letter-spacing: 1px;
   resize: none;
 }
+.white-mode .form-group textarea {
+  background-color: #fdfefe;
+  border: 2px solid #dadada;
+  color: var(--color-body);
+  box-shadow: none;
+}
 .form-group .form-control:focus {
   background-color: #191b1e;
   color: var(--color-light);
+  border-color: var(--color-primary);
+  box-shadow: none;
+}
+.white-mode .form-group .form-control:focus {
+  background-color: #fdfefe;
+  color: var(--color-lightn);
   border-color: var(--color-primary);
   box-shadow: none;
 }
@@ -792,6 +846,10 @@ section .title {
 .merits {
   background-color: var(--background-color-2);
   border-bottom: 1px solid var(--color-body-white);
+}
+.white-mode .merits {
+  background-color: var(--background-color-1);
+  border-bottom: 1px solid #dce1e4;
 }
 .merits .row {
   row-gap: 25px;
@@ -810,9 +868,12 @@ section .title {
 .merits .merit-desc {
   margin-inline-start: 12px;
 }
+.white-mode .merits .merit-desc {
+  color: var(--color-body) !important;
+}
 /* Footer */
-footer {
-  background-color: var(--background-color-1);
+.white-mode footer {
+  background-color: var(--background-color-1) !important;
 }
 footer .footer-desc {
   font-size: 14px;
@@ -864,6 +925,7 @@ footer .newsletter input {
   color: var(--color-lightn);
   border: 1px solid #191b1e;
 }
+
 footer .newsletter input:focus {
   background-color: #191b1e;
   color: var(--color-light);
@@ -871,6 +933,9 @@ footer .newsletter input:focus {
   border: 1px solid #191b1e;
 }
 
+  .white-mode footer .newsletter input {
+    color: var(--color-light);
+  }
 footer .newsletter form button {
   display: inline-block;
   color: #ffffff;
@@ -1071,8 +1136,12 @@ footer .newsletter form button {
 }
 .rights {
   background-color: var(--background-color-2);
+  margin: 0 !important;
+  padding: 10px 0 ;
 }
-
+.white-mode .rights {
+  background-color: var(--background-color-1);
+}
 /* Product */
 
 #product .product-image-wrapper {

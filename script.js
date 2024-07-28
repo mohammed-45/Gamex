@@ -145,6 +145,8 @@ if (document.getElementById("account-btn")) {
 }
 
 const toggleButton = document.getElementById("white-mode-toggle");
+const toggleButton2 = document.getElementById("white-mode-toggle2");
+
 const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme === "dark") {
@@ -152,6 +154,18 @@ if (currentTheme === "dark") {
 }
 
 toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("white-mode");
+
+  let theme = "light";
+  if (document.body.classList.contains("white-mode")) {
+    theme = "dark";
+  }
+  localStorage.setItem("theme", theme);
+});
+
+
+
+toggleButton2.addEventListener("click", () => {
   document.body.classList.toggle("white-mode");
 
   let theme = "light";

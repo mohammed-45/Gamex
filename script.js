@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", scrollActive);
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButtons = document.querySelectorAll(".toggleButton");
 
@@ -104,27 +103,27 @@ if (document.getElementById("account-btn")) {
     setActiveButton("account-btn");
     showSection("account-section");
   });
-  
+
   document.getElementById("wallet-btn").addEventListener("click", function () {
     console.log("wallet");
-  
+
     setActiveButton("wallet-btn");
     showSection("wallet-section");
   });
-  
+
   document
     .getElementById("transactions-btn")
     .addEventListener("click", function () {
       setActiveButton("transactions-btn");
       showSection("transactions-section");
     });
-  
+
   document.getElementById("orders-btn").addEventListener("click", function () {
     setActiveButton("orders-btn");
-  
+
     showSection("orders-section");
   });
-  
+
   function setActiveButton(buttonId) {
     var buttons = document.querySelectorAll(".side-controller button");
     buttons.forEach(function (button) {
@@ -132,7 +131,7 @@ if (document.getElementById("account-btn")) {
     });
     document.getElementById(buttonId).classList.add("active-button");
   }
-  
+
   function showSection(sectionId) {
     var sections = document.querySelectorAll(".profile-section");
     sections.forEach(function (section) {
@@ -143,5 +142,21 @@ if (document.getElementById("account-btn")) {
       }
     });
   }
-  
 }
+
+const toggleButton = document.getElementById("white-mode-toggle");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme === "dark") {
+  document.body.classList.add("white-mode");
+}
+
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("white-mode");
+
+  let theme = "light";
+  if (document.body.classList.contains("white-mode")) {
+    theme = "dark";
+  }
+  localStorage.setItem("theme", theme);
+});

@@ -312,14 +312,14 @@ section .title {
 .white-mode .header.scrolled .navbar-nav .nav-item .nav-link {
   color: var(--color-body-white) !important;
 }
-.white-mode .navbar-nav .nav-item .nav-link {
+.white-mode.home .navbar-nav .nav-item .nav-link {
   color: #878e99 !important;
 }
 .white-mode .header.scrolled .navbar-nav .nav-item .nav-link:hover {
   color: black !important;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
+.home .navbar-nav .nav-item .nav-link:hover {
   color: var(--color-white) !important;
 }
 .navbar-nav .nav-item .nav-link.active {
@@ -330,19 +330,26 @@ section .title {
   font-size: 32px;
   color: var(--color-lightn) !important;
 }
+.white-mode.home .header .logo {
+  color: #c4cfde !important;
+}
 .white-mode .header.scrolled .logo {
   color: var(--color-lightn) !important;
 }
 .header.scrolled svg {
-  color: var(--color-body);
+  color: var(--color-body) !important;
 }
-.white-mode .header .logo {
-  color: #c4cfde !important;
+.home .header.scrolled svg {
+  color: var(--color-body) !important;
+}
+.home .header svg {
+  color: #878e99 !important;
 }
 .header svg {
-  color: #878e99;
+  color: var(--color-body) !important;
 }
-
+.white-mode .header svg {
+}
 @media (max-width: 768px) {
   .logo {
     font-size: 24px;
@@ -462,7 +469,6 @@ section .title {
 }
 .popup-mobile-menu .inner .menu-top .menu-header .logo {
   color: var(--color-body) !important;
-
 }
 .popup-mobile-menu .inner .menu-top .menu-header .close-button {
   display: flex;
@@ -483,7 +489,13 @@ section .title {
   color: #ff014f;
   height: auto;
 }
-.white-mode .popup-mobile-menu .inner .menu-top .menu-header .close-button .close:after {
+.white-mode
+  .popup-mobile-menu
+  .inner
+  .menu-top
+  .menu-header
+  .close-button
+  .close:after {
   background: var(--gradient-box-w);
   box-shadow: var(--shadow-white-3);
 }
@@ -676,7 +688,7 @@ section .title {
   display: inline-block;
   overflow: hidden;
 }
-.white-mode .product-card .wrapper{
+.white-mode .product-card .wrapper {
   background: var(--gradient-box-w);
   box-shadow: var(--shadow-white-3);
 }
@@ -806,7 +818,6 @@ section .title {
   box-shadow: none;
 }
 
-
 .form-group textarea {
   min-height: 235px;
   background-color: #191b1e;
@@ -933,9 +944,9 @@ footer .newsletter input:focus {
   border: 1px solid #191b1e;
 }
 
-  .white-mode footer .newsletter input {
-    color: var(--color-light);
-  }
+.white-mode footer .newsletter input {
+  color: var(--color-light);
+}
 footer .newsletter form button {
   display: inline-block;
   color: #ffffff;
@@ -969,6 +980,11 @@ footer .newsletter form button {
   border: 2px solid #191b1e;
   box-shadow: var(--inner-shadow);
 }
+.white-mode #profile .side-controller {
+  background-color: #fdfefe;
+  border: 2px solid #dadada;
+  box-shadow: none;
+}
 #profile .side-controller li button {
   font-size: 16px;
   font-weight: 600;
@@ -987,6 +1003,10 @@ footer .newsletter form button {
   color: var(--color-lightn);
   border-bottom: 1px solid var(--color-body-white) !important;
 }
+.white-mode #profile .side-controller li button {
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
 #profile .side-controller li:last-of-type button {
   border: none !important;
 }
@@ -1028,7 +1048,7 @@ footer .newsletter form button {
 
 #profile .profile-section.show {
   opacity: 1;
-  max-height: 1000px;
+  max-height: unset;
 }
 #profile .table {
   margin: 0;
@@ -1047,6 +1067,10 @@ footer .newsletter form button {
   font-size: 15px;
   font-weight: 300;
 }
+.white-mode #profile .table thead tr {
+  border: 1px solid #dadada;
+  color: var(--color-body);
+}
 #profile .table tbody {
   font-size: 14px;
 }
@@ -1056,7 +1080,10 @@ footer .newsletter form button {
   padding: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+.white-mode #profile .table th,
+.white-mode #profile .table td {
+  border: 1px solid #dadada;
+}
 #profile .table tr th {
   padding: 10px 15px;
   color: #fff;
@@ -1065,12 +1092,19 @@ footer .newsletter form button {
   border: 1px solid rgba(255, 255, 255, 0.1);
   vertical-align: top;
 }
+.white-mode #profile .table tr th {
+  border: 1px solid #dadada;
+  color: var(--color-body);
+}
 #profile .table tbody tr td {
   color: var(--color-body);
   vertical-align: middle;
   padding: 10px 15px;
   border-width: 1px;
   border-color: rgba(255, 255, 255, 0.1);
+}
+.white-mode #profile .table tbody tr td {
+  border: 1px solid #dadada;
 }
 #profile .side-controller li button svg {
   width: 28px;
@@ -1079,7 +1113,9 @@ footer .newsletter form button {
 #profile .hidden-label {
   visibility: hidden;
 }
-
+.white-mode #profile .change-password {
+  color: var(--color-lightn);
+}
 #profile .form-group .image-wrapper {
   width: 116px;
   height: 116px;
@@ -1137,7 +1173,7 @@ footer .newsletter form button {
 .rights {
   background-color: var(--background-color-2);
   margin: 0 !important;
-  padding: 10px 0 ;
+  padding: 10px 0;
 }
 .white-mode .rights {
   background-color: var(--background-color-1);
@@ -1201,6 +1237,11 @@ footer .newsletter form button {
   border: 2px solid #191b1e;
   box-shadow: var(--inner-shadow);
 }
+.white-mode #product .product-info-wrapper form .pay-box {
+  box-shadow: none;
+  border: 1px solid #dadada;
+  background-color: #fdfefe;
+}
 #product .product-info-wrapper form .pay-box h5 {
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -1226,7 +1267,25 @@ footer .newsletter form button {
   .method
   .btn-check
   + .btn-primary {
-  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 8px;
+}
+#product
+  .product-info-wrapper
+  form
+  .pay-box.select-recharge
+  .options
+  .method
+  .btn-check
+  + .btn-primary
+  img {
+  width: 100%;
+  height: 100px;
+  max-height: 100px;
+  /* position: relative;
+  z-index: 1; */
 }
 #product .product-info-wrapper form .pay-box .options .method {
   width: 130px;
@@ -1257,6 +1316,17 @@ footer .newsletter form button {
   transition: 0.4s;
   min-height: 100%;
 }
+.white-mode
+  #product
+  .product-info-wrapper
+  form
+  .pay-box
+  .method
+  .btn-check
+  + .btn-primary {
+  border: 4px solid var(--color-body);
+}
+
 #product .product-info-wrapper form .pay-box .btn-check + .btn-primary::after {
   position: absolute;
   content: "";
@@ -1266,6 +1336,15 @@ footer .newsletter form button {
   top: 0;
   inset-inline-start: 0;
   cursor: pointer;
+}
+.white-mode
+  #product
+  .product-info-wrapper
+  form
+  .pay-box
+  .btn-check
+  + .btn-primary::after {
+  background: rgba(255, 255, 255, 0.5);
 }
 #product
   .product-info-wrapper
@@ -1284,8 +1363,18 @@ footer .newsletter form button {
   opacity: 0;
   width: 20px;
   height: 20px;
+  z-index: 10;
 }
 #product .product-info-wrapper form .pay-box .btn-check:focus + .btn-primary {
+  border: 4px solid var(--color-primary);
+}
+.white-mode
+  #product
+  .product-info-wrapper
+  form
+  .pay-box
+  .btn-check:focus
+  + .btn-primary {
   border: 4px solid var(--color-primary);
 }
 #product
@@ -1316,6 +1405,9 @@ footer .newsletter form button {
   cursor: pointer;
   text-align: center;
   padding: 0px 15px;
+}
+.white-mode #product .product-info-wrapper .product-checkout .pro-qty .qtybtn {
+  color: var(--color-body);
 }
 #product .product-info-wrapper .product-checkout .pro-qty input {
   text-align: center;
@@ -1367,8 +1459,10 @@ footer .newsletter form button {
 #product .description hr {
   background-color: var(--color-body-white);
 }
+.white-mode #product .description hr {
+  background-color: #dadada;
+}
 #product .description .btn-custom {
-  color: white;
   background: transparent;
   transition: var(--transition);
   position: relative;
@@ -1386,7 +1480,9 @@ footer .newsletter form button {
   width: 100%;
   background-color: var(--color-primary);
 }
-
+.white-mode #product .description .btn-custom.active {
+  color: white;
+}
 #product .description .btn-custom::before {
   position: absolute;
   inset-inline-start: 0;
@@ -1421,7 +1517,9 @@ footer .newsletter form button {
   width: 100%;
   background-color: var(--color-primary);
 }
-
+.white-mode #product .description .btn-custom:hover {
+  color: white;
+}
 #product .description > div.hidden {
   opacity: 0;
   height: 0;
@@ -1539,7 +1637,10 @@ footer .newsletter form button {
   box-shadow: var(--inner-shadow);
   outline: none;
 }
-
+.white-mode .page-link {
+  box-shadow: none;
+  border: 1px solid #dadada !important;
+}
 .page-link:hover {
   background-color: var(--color-primary);
   color: white !important;
@@ -1548,6 +1649,9 @@ footer .newsletter form button {
   z-index: 3;
   outline: 0;
   box-shadow: var(--inner-shadow);
+}
+.white-mode .page-link:focus {
+  box-shadow: none;
 }
 .page-item.active .page-link {
   background-color: var(--color-primary);

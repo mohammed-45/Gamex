@@ -1472,8 +1472,12 @@ footer .newsletter form button {
   font-weight: 500;
   border: none;
   margin-inline-end: 16px;
-}
+  color: white;
 
+}
+.white-mode #product .description .btn-custom {
+  color: var(--color-body);
+}
 #product .description .btn-custom.active::before,
 #product .description .btn-custom.active::after {
   height: 100%;

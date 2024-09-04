@@ -1890,3 +1890,117 @@ footer .newsletter form button {
 #blog .blog-info-wrapper .description .desc p {
   font-size: 16px;
 }
+
+
+
+
+
+#cart .total_wrapper {
+  padding: 25px;
+  border: 3px solid rgba(255,255,255,0.1);
+  position: sticky;
+    top: 80px;
+}
+#cart .total_wrapper >h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+
+
+}
+#cart .total_wrapper > .total {
+  padding: 15px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+#cart .total_wrapper > .total h3 {
+font-size: 20px;
+margin-bottom: 0px;
+
+}
+#cart .total_wrapper > .subtotal {
+  padding: 15px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+#cart .total_wrapper > .subtotal h3 {
+font-size: 16px;
+margin-bottom: 0px;
+
+}
+#cart .total_wrapper > .subtotal .price {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+}
+#cart .total_wrapper > .total .price {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 24px;
+}
+#cart .total_wrapper > .proceed {
+  width: 100%;
+  margin-top: 15px;
+}
+.product-cart {
+  display: flex;
+  column-gap: 15px;
+padding-block: 40px;  
+}
+.product-cart:not(:last-child) {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.product-cart img {
+  object-fit: contain;
+  width: 150px;
+  height: 140px;
+  padding: 0 5px;
+  
+}
+.product-cart .content h4 {
+  font-size: 16px;
+}
+.product-cart .content .price {
+  font-size: 18px;
+  margin: 20px 0;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+.product-cart .delete {
+  margin-inline-start: auto;
+}
+.product-cart .content .pro-qty {
+  border: 2px solid var(--color-border);
+  margin-inline-end: 20px;
+  width: fit-content;
+}
+.product-cart .content .pro-qty .qtybtn {
+  font-size: 24px;
+  color: #b2b2b2;
+  /* float: inline-start; */
+  line-height: 40px;
+  cursor: pointer;
+  text-align: center;
+  padding: 0px 15px;
+
+}
+.white-mode .product-cart .content .pro-qty .qtybtn {
+  color: var(--color-body);
+}
+.product-cart .content .pro-qty input {
+  text-align: center;
+  width: 52px;
+  font-weight: 700;
+  border: none;
+  color: #4c4c4c;
+  line-height: 42px;
+  /* float: inline-start; */
+}
